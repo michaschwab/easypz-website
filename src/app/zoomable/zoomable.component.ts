@@ -176,6 +176,8 @@ export class ZoomComponent implements AfterViewInit
         
         let eventType = ZoomComponent.MOUSE_EVENT_TYPES.MOUSE_DOWN;
         this.onMouseTouchEvent(eventType, event);
+    
+        event.preventDefault();
     }
 
     @HostListener('mousedown', ['$event']) onMouseDown(event: MouseEvent)
@@ -217,6 +219,8 @@ export class ZoomComponent implements AfterViewInit
         {
             cb();
         }
+        
+        event.preventDefault();
     }
     
     @HostListener('mousemove', ['$event']) onMouseMove(event: MouseEvent)
@@ -263,6 +267,8 @@ export class ZoomComponent implements AfterViewInit
     
         let eventType = ZoomComponent.MOUSE_EVENT_TYPES.MOUSE_UP;
         this.onMouseTouchEvent(eventType, event);
+    
+        event.preventDefault();
     }
     
     onMouseTouchEvent(eventType: number, event: MouseEvent|TouchEvent)

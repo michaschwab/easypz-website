@@ -1,4 +1,4 @@
-<div class="home">
+<div class="home" #homeContainer>
 
     <div class="content">
         <h1>Zoom How You Want - Try it!</h1>
@@ -12,7 +12,7 @@
             <p>These methods are pretty standard. Flick pan means that the content keeps its momentum when you release the pointer, and then slows down. You can also zoom out with double right click.</p>
             <a class="toggleCode" (click)="showCode[0]=!showCode[0]"><span *ngIf="!showCode[0]">Show</span><span *ngIf="showCode[0]">Hide</span> Code</a>
         </header>
-        <numbervis [vertical]="false" [zoomModes]="['FLICK_PAN', 'WHEEL_ZOOM', 'PINCH_ZOOM', 'DBLCLICK_ZOOM_IN', 'DBLRIGHTCLICK_ZOOM_OUT']" [lastNumber]="20000000" [numberMode]="false" [width]="400" [height]="140" style="width:400px;height:140px"></numbervis>
+        <numbervis [vertical]="false" [zoomModes]="['FLICK_PAN', 'WHEEL_ZOOM', 'PINCH_ZOOM', 'DBLCLICK_ZOOM_IN', 'DBLRIGHTCLICK_ZOOM_OUT']" [lastNumber]="20000000" [numberMode]="false" [width]="timelineWidth" [height]="140" [style.width]="timelineWidth+'px'" style="height:140px"></numbervis>
         <br style="clear:both" />
         <pre *ngIf="showCode[0]"><code><![CDATA[<zoomable [enabledModes]="['FLICK_PAN', 'WHEEL_ZOOM', 'PINCH_ZOOM', 'DBLCLICK_ZOOM_IN', 'DBLRIGHTCLICK_ZOOM_OUT']">
     <!-- Timeline Visualization -->
@@ -26,7 +26,7 @@
             <p>Hold zoom in requires much less work to zoom in, particularly when compared against pinching on mobile devices. Notice that you can adjust the zoom position while zooming.</p>
             <a class="toggleCode" (click)="showCode[1]=!showCode[1]"><span *ngIf="!showCode[1]">Show</span><span *ngIf="showCode[1]">Hide</span> Code</a>
         </header>
-        <numbervis [vertical]="false" [zoomModes]="['FLICK_PAN', 'HOLD_ZOOM_IN', 'DBLCLICK_ZOOM_OUT']" [lastNumber]="20000000" [numberMode]="false" [width]="400" [height]="140" style="width:400px;height:140px"></numbervis>
+        <numbervis [vertical]="false" [zoomModes]="['FLICK_PAN', 'HOLD_ZOOM_IN', 'DBLCLICK_ZOOM_OUT']" [lastNumber]="20000000" [numberMode]="false" [width]="timelineWidth" [height]="140" [style.width]="timelineWidth+'px'" style="height:140px"></numbervis>
         <br style="clear:both" />
         <pre *ngIf="showCode[1]"><code><![CDATA[<zoomable [enabledModes]="['FLICK_PAN', 'HOLD_ZOOM_IN', 'DBLCLICK_ZOOM_OUT']">
     <!-- Timeline Visualization -->
@@ -40,7 +40,7 @@
             <p>Brush zooming is a very precise and efficient way of zooming, in terms of interaction per scale change. However, fast context switches and the incompatibility with standard panning make this method harder for beginners.</p>
             <a class="toggleCode" (click)="showCode[2]=!showCode[2]"><span *ngIf="!showCode[2]">Show</span><span *ngIf="showCode[2]">Hide</span> Code</a>
         </header>
-        <numbervis [vertical]="false" [zoomModes]="['WHEEL_PAN_X', 'PINCH_PAN', 'BRUSH_ZOOM_X', 'DBLCLICK_ZOOM_OUT']" [lastNumber]="20000000" [numberMode]="false" [width]="400" [height]="140" style="width:400px;height:140px"></numbervis>
+        <numbervis [vertical]="false" [zoomModes]="['WHEEL_PAN_X', 'PINCH_PAN', 'BRUSH_ZOOM_X', 'DBLCLICK_ZOOM_OUT']" [lastNumber]="20000000" [numberMode]="false" [width]="timelineWidth" [height]="140" [style.width]="timelineWidth+'px'" style="height:140px"></numbervis>
         <br style="clear:both" />
         <pre *ngIf="showCode[2]"><code><![CDATA[<zoomable [enabledModes]="['WHEEL_PAN_X', 'PINCH_PAN', 'BRUSH_ZOOM_X', 'DBLCLICK_ZOOM_OUT']">
     <!-- Timeline Visualization -->
@@ -56,7 +56,7 @@
             <p>To use dynamic zoom, "drag" the timeline down, and adjust the zooming position to the left or right during the process. Dynamic zoom is also a very efficient method. In our study, it fared comparably or better than the standard methods on both mobile and desktop.</p>
             <a class="toggleCode" (click)="showCode[3]=!showCode[3]"><span *ngIf="!showCode[3]">Show</span><span *ngIf="showCode[3]">Hide</span> Code</a>
         </header>
-        <numbervis [vertical]="false" [zoomModes]="['FLICK_PAN', 'DYNAMIC_ZOOM_Y_ADJUSTABLE']" [lastNumber]="20000000" [numberMode]="false" [width]="400" [height]="200" style="width:400px;height:200px"></numbervis>
+        <numbervis [vertical]="false" [zoomModes]="['FLICK_PAN', 'DYNAMIC_ZOOM_Y_ADJUSTABLE']" [lastNumber]="20000000" [numberMode]="false" [width]="timelineWidth" [height]="200" [style.width]="timelineWidth+'px'" style="height:200px"></numbervis>
         <br style="clear:both" />
         <pre *ngIf="showCode[3]"><code><![CDATA[<zoomable [enabledModes]="['FLICK_PAN', 'DYNAMIC_ZOOM_Y_ADJUSTABLE']">
     <!-- Timeline Visualization -->

@@ -1,0 +1,60 @@
+.home {
+    padding-bottom: 40px;
+}
+.content {
+    padding: 0 20px;
+}
+
+numbervis {
+    background: #fff;
+}
+
+@media(min-width:1000px)
+{
+    section header {
+        width: 550px;
+        float: left;
+    }
+    section numbervis {
+        float: right;
+    }
+}
+
+section.content {
+    background: #333;
+    /*height: 160px;*/
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 3px #111;
+}
+
+h3, h4 {
+    margin: 0;
+}
+h3 {
+    font-size: 26px;
+}
+h4 {
+    font-weight: normal;
+}
+
+pre {
+    font-size: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    background: #111;
+    margin: 15px 0 0;
+}
+
+.toggleCode {
+    cursor: pointer;
+    display: inline-block;
+    background: #ddd;
+    color: #000;
+    padding: 5px 12px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #111;
+    width: 120px;
+    text-align: center;
+}

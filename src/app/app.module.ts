@@ -8,8 +8,6 @@ import {NumberVisComponent} from './number-vis/number-vis.component';
 import {AnimationService} from '../services/animation.service';
 import {ZoomComponent} from './zoomable/zoomable.component';
 import {LoggerComponent } from './logger/logger.component';
-import {AngularFireModule} from 'angularfire2';
-import {AngularFireDatabaseModule} from 'angularfire2/database';
 import {environment} from '../environments/environment';
 import {RouterModule, Routes} from '@angular/router';
 import {ComboService} from '../services/combo.service';
@@ -60,9 +58,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes),
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireDatabaseModule
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [AnimationService, ComboService, RandomstringService, ExperimentsettingsService, BrowserinfoService],
   bootstrap: [AppComponent]

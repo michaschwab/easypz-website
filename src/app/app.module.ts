@@ -26,6 +26,7 @@ import {StdeverrorPipe} from '../services/stdeverror.pipe';
 import {FilteroutextremevaluesPipe} from '../services/filteroutextremevalues.pipe';
 import {SubtractIndividuallyPipe} from 'services/subtractindividually.pipe';
 import {FilterHighValuesService} from '../services/filterHighValues.service';
+import {ResearchComponent} from "./research/research.component";
 
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -42,6 +43,7 @@ const appRoutes: Routes = [
     ZoomComponent,
     NumberVisComponent,
     LoggerComponent,
+    ResearchComponent,
     HomeComponent,
     RoundPipe,
     TruncatePipe,

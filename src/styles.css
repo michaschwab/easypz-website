@@ -24,11 +24,12 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;*/
+    box-sizing: border-box;
 }
 
 h1, h3 {
     color: #d70;
-    text-shadow: 1px 1px 2px #666;
+    /*text-shadow: 1px 1px 2px #666;*/
 }
 
 h3:before {
@@ -126,3 +127,4 @@ button.disabled {
 a {
     color: #fff;
 }
+

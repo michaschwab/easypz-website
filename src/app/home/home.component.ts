@@ -1,11 +1,11 @@
-import {AfterViewChecked, Component, ElementRef, ViewChild} from '@angular/core';
+import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
 
 @Component({
   selector: "home",
   templateUrl: "home.component.html",
   styleUrls: ["./home.component.scss"]
 })
-export class HomeComponent implements AfterViewChecked
+export class HomeComponent implements AfterViewInit
 {
     @ViewChild("homeContainer") homeContainer : ElementRef;
     
@@ -18,8 +18,8 @@ export class HomeComponent implements AfterViewChecked
         2: false,
         3: false,
     };
-    
-    ngAfterViewChecked(): void
+
+    ngAfterViewInit(): void
     {
         this.width = this.homeContainer.nativeElement.offsetWidth;
         this.timelineWidth = this.width < 1000 ? this.width - 30 : 420;

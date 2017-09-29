@@ -1,5 +1,5 @@
 .home {
-    padding-bottom: 40px;
+    padding: 67px 0 40px 0;
 }
 .content {
     padding: 0 20px;
@@ -62,6 +62,8 @@ pre {
 .website-section-header {
     background: #d70;
     padding: 0px 20px;
+    position: fixed;
+    width: 960px;
 }
 .website-section-header h2 {
     margin: 0;

@@ -66,6 +66,9 @@ pre {
 .website-section-header {
     background: #d70;
     padding: 0px 20px;
+    position: sticky;
+    width: 960px;
+    top: 67px;
 }
 .website-section-header h2 {
     margin: 0;
@@ -101,6 +104,12 @@ pre {
     top: 70px;
     color: #d70;
     background: #333;
+}
+.versus.big {
+    height: 440px;
+}
+.versus.big span {
+    top: 210px;
 }
 
 

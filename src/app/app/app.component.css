@@ -19,7 +19,7 @@ nav {
 ul {
     list-style: none;
     display: inline;
-    width: 45%;
+
     float: right;
     padding-left: 0;
     margin: 15px 0 0 0;
@@ -31,31 +31,57 @@ ul li {
 nav {
     position: fixed;
     height: 67px;
-    width: 1000px;
+    /*width: 1000px;*/
+    /*width: 100%;*/
     background: #222;
 }
 nav a {
     display: inline-block;
     background: #d70;
     padding: 10px 20px;
-    margin-left: 20px;
+
     cursor: pointer;
-    width: 130px;
+
     text-align: center;
     text-decoration: none;
     transition: padding linear 200ms;
 }
-nav a:hover:before {
-    content: "» ";
+@media(min-width:1000px) {
+    nav a {
+        width: 130px;
+        margin-left: 20px;
+    }
+    ul {
+        width: 45%;
+    }
+    nav a:hover:before {
+        content: "» ";
+    }
+    nav a:hover:after {
+        content: " «";
+    }
 }
-nav a:hover:after {
-    content: " «";
+@media(max-width:999px) {
+    nav a {
+        width: 5px;
+        margin-left: 3px;
+    }
+    nav li a i {
+        margin-left: -3px;
+    }
+    nav li:first-child a i {
+        margin-left: -6px;
+    }
+    ul {
+        width: 110px;
+    }
 }
+
 nav a.active {
     padding-bottom: 20px;
     margin-bottom: -10px;
 }
 header {
-    width: 50%;
+    /*width: 50%;*/
     float: left;
 }

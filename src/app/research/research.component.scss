@@ -69,6 +69,7 @@ pre {
     position: sticky;
     width: 960px;
     top: 67px;
+    z-index: 200;
 }
 .website-section-header h2 {
     margin: 0;
@@ -83,6 +84,7 @@ pre {
 .versus {
     border: 0 dashed #d70;
     position: relative;
+    z-index: 100;
 }
 .versus span {
     position: absolute;

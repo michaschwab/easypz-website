@@ -21,4 +21,9 @@ export class AppComponent implements AfterViewInit
             this.activeTab = scrollPos >= researchPos ? 'research' : 'library';
         });
     }
+    
+    scrollTo(anchorName: string)
+    {
+        document.getElementsByName(anchorName)[0].scrollIntoView({block: 'start', behavior: 'smooth'});
+    }
 }

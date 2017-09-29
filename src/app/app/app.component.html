@@ -7,8 +7,8 @@
             <h2>EasyPZ Pan & Zoom</h2>
         </header>
         <ul>
-            <li><a [class.active]="activeTab=='library'" href="#library"><i class="fa fa-code" aria-hidden="true"></i> JS Library</a></li>
-            <li><a [class.active]="activeTab=='research'" href="#research"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Research</a></li>
+            <li><a [class.active]="activeTab=='library'" (click)="scrollTo('library')"><i class="fa fa-code" aria-hidden="true"></i> JS Library</a></li>
+            <li><a [class.active]="activeTab=='research'" (click)="scrollTo('research')"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Research</a></li>
         </ul>
         <br style="clear: both" />
     </nav>

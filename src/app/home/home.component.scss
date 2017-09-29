@@ -12,7 +12,7 @@ numbervis {
 @media(min-width:1000px)
 {
     section header {
-        width: 540px;
+        width: 432px;
         float: left;
     }
     section numbervis {
@@ -71,4 +71,8 @@ pre {
     letter-spacing: 10px;
     text-transform: uppercase;
     font-weight: normal;
+}
+
+.content p, .section-content p {
+    text-align: justify;
 }

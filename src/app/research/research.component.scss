@@ -141,3 +141,7 @@ header h3 {
 .download:hover:after {
     content: " «";
 }
+
+.content p, .section-content p {
+    text-align: justify;
+}

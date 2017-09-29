@@ -79,39 +79,16 @@ pre {
 }
 
 
-.section-content, section header.section-content {
-    width: 45%;
-    float: left;
-}
-.section-content:last-of-type, .section-content.second-content {
-    float: right;
-}
-.section-content.second-content {
-    text-align: right;
-}
 
 .versus {
-    width: 5%;
-    float: left;
-    border-right: 1px dashed #d70;
-    height: 160px;
-    margin-top: -10px;
+    border: 0 dashed #d70;
     position: relative;
 }
 .versus span {
     position: absolute;
-    right: -16px;
-    top: 70px;
     color: #d70;
     background: #333;
 }
-.versus.big {
-    height: 440px;
-}
-.versus.big span {
-    top: 210px;
-}
-
 
 .research .section-content img {
     padding: 5px 10px 3px 10px;
@@ -144,4 +121,52 @@ header h3 {
 
 .content p, .section-content p {
     text-align: justify;
+}
+
+
+@media(min-width:1000px) {
+    .section-content, section header.section-content {
+        width: 45%;
+        float: left;
+    }
+    .section-content:last-of-type, .section-content.second-content {
+        float: right;
+    }
+    .section-content.second-content {
+        text-align: right;
+    }
+    .versus {
+        width: 5%;
+        float: left;
+        border-right-width: 1px;
+        height: 160px;
+        margin-top: -10px;
+    }
+    .versus span {
+        right: -16px;
+        top: 70px;
+    }
+
+    .versus.big {
+        height: 440px;
+    }
+    .versus.big span {
+        top: 210px;
+    }
+
+}
+
+@media(max-width:999px)
+{
+    .versus {
+        width: 100%;
+        height: 25px;
+        border-bottom-width: 1px;
+        /*margin-top: -10px;*/
+        margin-bottom: 25px;
+    }
+    .versus span {
+        right: 45%;
+        top: 15px;
+    }
 }

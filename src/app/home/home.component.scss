@@ -63,7 +63,14 @@ pre {
     background: #d70;
     padding: 0px 20px;
     position: fixed;
-    width: 960px;
+    width: 100%;
+    box-sizing: border-box;
+}
+@media(min-width:1000px)
+{
+    .website-section-header {
+        width: 1000px;
+    }
 }
 .website-section-header h2 {
     margin: 0;

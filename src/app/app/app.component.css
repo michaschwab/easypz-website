@@ -9,7 +9,7 @@ h2 {
 
 nav {
     padding: 0 20px 10px;
-    border-bottom: 1px solid #d70;
+    /*border-bottom: 1px solid #d70;*/
     /*border-bottom: 1px solid #555;*/
 
     box-sizing: border-box;
@@ -79,7 +79,7 @@ nav a {
 }
 
 nav a.active {
-    padding-bottom: 20px;
+    padding-bottom: 22px;
     margin-bottom: -10px;
 }
 header {

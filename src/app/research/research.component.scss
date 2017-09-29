@@ -67,7 +67,8 @@ pre {
     background: #d70;
     padding: 0px 20px;
     position: sticky;
-    width: 960px;
+    width: 100%;
+    box-sizing: border-box;
     top: 67px;
     z-index: 200;
 }

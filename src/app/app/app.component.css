@@ -19,7 +19,7 @@ nav {
 ul {
     list-style: none;
     display: inline;
-    width: 39%;
+    width: 45%;
     float: right;
     padding-left: 0;
     margin: 15px 0 0 0;
@@ -40,7 +40,7 @@ nav a {
     padding: 10px 20px;
     margin-left: 20px;
     cursor: pointer;
-    width: 120px;
+    width: 130px;
     text-align: center;
     text-decoration: none;
     transition: padding linear 200ms;
@@ -56,6 +56,6 @@ nav a.active {
     margin-bottom: -10px;
 }
 header {
-    width: 60%;
+    width: 50%;
     float: left;
 }

@@ -53,20 +53,41 @@
 
     <section class="content">
         <header>
-            <h3>2. Content</h3>
+            <h3>2. Timelines should be vertical, not horizontal</h3>
         </header>
 
         <div class="section-content">
-            <p>Work in progress.</p>
+            <p>For the traditional zooming methods such as two-finger pinch zoom and scroll zoom, participants of the study navigated faster using a vertical timeline than a horizontal timeline on mobile, and equal on desktop.</p>
+            <p>For more advanced methods that have user-controlled zoom speed, such as brush or dynamic zoom, the vertical orientation led to faster results than horizontal, and the difference is much bigger than for the traditional methods.</p>
         </div>
 
 
         <div class="section-content second-content">
 
-            <!--<img src="assets/datesVsNumbers.svg" width="400" />-->
+            <img src="assets/horizontalVsVerticalMobile.svg" width="400" />
 
         </div>
         <br style="clear:both" />
+
+
+
+
+        <div class="comparison">
+            <div class="section-content">
+                <numbervis [vertical]="true" [zoomModes]="['FLICK_PAN', 'WHEEL_ZOOM', 'PINCH_ZOOM', 'DBLCLICK_ZOOM_IN', 'DBLRIGHTCLICK_ZOOM_OUT']" [lastNumber]="20000000" [numberMode]="false" [width]="timelineWidth" [height]="timelineWidth" [style.width]="timelineWidth+'px'" [style.height]="timelineWidth+'px'"></numbervis>
+            </div>
+
+            <div class="versus">
+                <span>V.S.</span>
+            </div>
+
+            <div class="section-content second-content">
+                <numbervis [vertical]="false" [zoomModes]="['FLICK_PAN', 'WHEEL_ZOOM', 'PINCH_ZOOM', 'DBLCLICK_ZOOM_IN', 'DBLRIGHTCLICK_ZOOM_OUT']" [lastNumber]="20000000" [numberMode]="false" [width]="timelineWidth" [height]="timelineWidth" [style.width]="timelineWidth+'px'" [style.height]="timelineWidth+'px'"></numbervis>
+            </div>
+
+
+            <br style="clear:both" />
+        </div>
 
     </section>
 
@@ -76,5 +97,8 @@
 
         <a class="download" download href="assets/easypz_submission.pdf">Download</a>
     </div>
+
+
+
 
 </div>

@@ -80,7 +80,7 @@ pre {
     width: 45%;
     float: left;
 }
-.section-content:last-of-type {
+.section-content:last-of-type, .section-content.second-content {
     float: right;
 }
 .section-content.second-content {
@@ -104,7 +104,7 @@ pre {
 }
 
 
-.dates-vs-numbers img {
+.research .section-content img {
     padding: 5px 10px 3px 10px;
     background: #fff;
 }

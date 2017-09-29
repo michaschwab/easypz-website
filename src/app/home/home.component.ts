@@ -22,6 +22,6 @@ export class HomeComponent implements AfterViewChecked
     ngAfterViewChecked(): void
     {
         this.width = this.homeContainer.nativeElement.offsetWidth;
-        this.timelineWidth = this.width < 1000 ? this.width - 30 : 400;
+        this.timelineWidth = this.width < 1000 ? this.width - 30 : 420;
     }
 }

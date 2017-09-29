@@ -37,10 +37,10 @@ nav a {
     width: 120px;
     text-align: center;
 }
-a:hover:before {
+nav a:hover:before {
     content: "» ";
 }
-a:hover:after {
+nav a:hover:after {
     content: " «";
 }
 nav a.active {

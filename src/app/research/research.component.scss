@@ -1,0 +1,114 @@
+.home {
+    padding-bottom: 40px;
+}
+.content {
+    padding: 0 20px;
+}
+
+numbervis {
+    background: #fff;
+}
+
+@media(min-width:1000px)
+{
+    section header {
+        width: 550px;
+        float: left;
+    }
+    section numbervis {
+        float: right;
+    }
+}
+
+section.content {
+    background: #333;
+    /*height: 160px;*/
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 3px #111;
+}
+
+h3, h4 {
+    margin: 0;
+}
+h3 {
+    font-size: 26px;
+}
+h4 {
+    font-weight: normal;
+}
+
+pre {
+    font-size: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    background: #111;
+    margin: 15px 0 0;
+}
+
+.toggleCode {
+    cursor: pointer;
+    display: inline-block;
+    background: #ddd;
+    color: #000;
+    padding: 5px 12px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px #111;
+    width: 120px;
+    text-align: center;
+}
+
+.website-section-header {
+    background: #d70;
+    padding: 0px 20px;
+}
+.website-section-header h2 {
+    margin: 0;
+    font-size: 100%;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+
+.section-content, section header.section-content {
+    width: 45%;
+    float: left;
+}
+.section-content:last-of-type {
+    float: right;
+}
+.section-content.second-content {
+    text-align: right;
+}
+
+.versus {
+    width: 5%;
+    float: left;
+    border-right: 1px dashed #d70;
+    height: 160px;
+    margin-top: -10px;
+    position: relative;
+}
+.versus span {
+    position: absolute;
+    right: -16px;
+    top: 70px;
+    color: #d70;
+    background: #333;
+}
+
+
+.dates-vs-numbers img {
+    padding: 5px 10px 3px 10px;
+    background: #fff;
+}
+
+.comparison {
+    margin-top: 30px;
+}
+
+header h3 {
+    margin-bottom: 10px;
+}

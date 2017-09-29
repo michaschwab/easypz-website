@@ -1,0 +1,53 @@
+<div class="research" #researchContainer>
+
+
+    <header class="website-section-header">
+        <h2>Research</h2>
+    </header>
+
+    <div class="content">
+        <h1>Insights From Our Extensive Study</h1>
+    </div>
+
+    <section class="content dates-vs-numbers">
+
+        <header>
+            <h3>1. In a world of big data, visual cues matter</h3>
+        </header>
+
+        <div class="info">
+
+            <div class="section-content">
+                <p>We found that participants take much longer to navigate to raw numbers than to targets on a visualization that uses years, dates, and minutes.</p>
+            </div>
+
+
+            <div class="section-content second-content">
+
+                <img src="assets/datesVsNumbers.svg" width="400" />
+
+            </div>
+            <br style="clear:both" />
+        </div>
+
+
+        <div class="comparison">
+            <div class="section-content">
+                <numbervis [vertical]="false" [zoomModes]="['FLICK_PAN', 'WHEEL_ZOOM', 'PINCH_ZOOM', 'DBLCLICK_ZOOM_IN', 'DBLRIGHTCLICK_ZOOM_OUT']" [lastNumber]="20000000" [numberMode]="true" [width]="timelineWidth" [height]="140" [style.width]="timelineWidth+'px'" style="height:140px"></numbervis>
+            </div>
+
+            <div class="versus">
+                <span>V.S.</span>
+            </div>
+
+            <div class="section-content second-content">
+                <numbervis [vertical]="false" [zoomModes]="['FLICK_PAN', 'WHEEL_ZOOM', 'PINCH_ZOOM', 'DBLCLICK_ZOOM_IN', 'DBLRIGHTCLICK_ZOOM_OUT']" [lastNumber]="20000000" [numberMode]="false" [width]="timelineWidth" [height]="140" [style.width]="timelineWidth+'px'" style="height:140px"></numbervis>
+            </div>
+
+
+            <br style="clear:both" />
+        </div>
+
+    </section>
+
+</div>

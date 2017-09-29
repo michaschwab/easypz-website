@@ -50,6 +50,7 @@ h3:before {
         background: #222;
     }
 }
+
 @media(max-width:999px) {
     .container {
         width: 99%;
@@ -71,6 +72,17 @@ h3:before {
 }
 @media(min-width:1000px) {
     .mobile-only {
+        display: none;
+    }
+}
+@media(max-width:599px) {
+    .small-on-mobile {
+        font-size: 60%;
+    }
+}
+
+@media(max-width:340px) {
+    .hide-on-tiny {
         display: none;
     }
 }

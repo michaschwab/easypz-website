@@ -15,11 +15,11 @@ numbervis {
 
 @media(min-width:1000px)
 {
-    section header {
+    .content:not(.interaction-comparison)  header {
         width: 550px;
         float: left;
     }
-    section numbervis {
+    .content:not(.interaction-comparison)  numbervis {
         float: right;
     }
 }
@@ -128,14 +128,14 @@ header h3 {
 
 
 @media(min-width:1000px) {
-    .section-content, section header.section-content {
+    .content:not(.interaction-comparison) .section-content, section header.section-content {
         width: 45%;
         float: left;
     }
-    .section-content:last-of-type, .section-content.second-content {
+    .content:not(.interaction-comparison) .section-content:last-of-type, .section-content.second-content {
         float: right;
     }
-    .section-content.second-content {
+    .content:not(.interaction-comparison) .section-content.second-content {
         text-align: right;
     }
     .versus {

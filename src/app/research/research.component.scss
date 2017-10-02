@@ -132,7 +132,7 @@ header h3 {
         width: 45%;
         float: left;
     }
-    .content:not(.interaction-comparison) .section-content:last-of-type, .section-content.second-content {
+    .content:not(.interaction-comparison) .section-content:last-of-type, .content:not(.interaction-comparison)  .section-content.second-content {
         float: right;
     }
     .content:not(.interaction-comparison) .section-content.second-content {

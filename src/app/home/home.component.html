@@ -70,8 +70,32 @@
 
 
     <div class="content">
-        <h1>Interested? Let Us Know!</h1>
-        <p>We are working on releasing all of our code in an organized and clean way. If you're interested in using it, <a href="mailto:easypzjs@gmail.com">let us know</a>! It motivates us and if needed, we might be able to give you a preliminary version of the library.</p>
+        <h1>The Library</h1>
+        <!--<p>We are working on releasing all of our code in an organized and clean way. If you're interested in using it, <a href="mailto:easypzjs@gmail.com">let us know</a>! It motivates us and if needed, we might be able to give you a preliminary version of the library.</p>-->
+        <article class="markdown-body entry-content" itemprop="text">
+
+            <p>To use EasyPZ, simply include</p>
+            <pre><code>&lt;script src="https://code.easypz.io/easypz.latest.min.js"&gt;&lt;/script&gt;
+</code></pre>
+            <p>and assign an <code>easypz</code> attribute to the visualization you want to make zoomable, e.g:</p>
+            <pre><code>&lt;svg easypz="true" width="960" height="600"&gt;
+
+&lt;/svg&gt;
+</code></pre>
+            <p>If you want to set specific settings, it can be done the following way:</p>
+            <pre><code>&lt;svg easypz='
+{{ '{' }}
+   "onPanned": "onPanned",
+   "onZoomed": "onZoomed",
+   "onResetAbsoluteScale": "onResetAbsoluteScale",
+   "modes": ["SIMPLE_PAN", "HOLD_ZOOM_IN", "CLICK_HOLD_ZOOM_OUT", "WHEEL_ZOOM", "PINCH_ZOOM", "DBLCLICK_ZOOM_IN", "DBLRIGHTCLICK_ZOOM_OUT"]
+{{ '}' }}' width="960" height="600"&gt;
+
+&lt;/svg&gt;
+</code></pre>
+            <p>Then, as minimum, implement the global scope functions <code>onZoomed()</code> and <code>onPanned()</code>.
+                EasyPZ will call them whenever it detects zoom and pan interactions, and will let you know how much the user wants to translate or scale the content</p>
+        </article>
     </div>
 
     <research></research>

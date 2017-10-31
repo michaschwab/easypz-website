@@ -97,6 +97,8 @@
                 EasyPZ will call them whenever it detects zoom and pan interactions, and will let you know how much the user wants to translate or scale the content.</p>
 
             <p>We are working on creating a demo page with lots of zoomable visualizations, and a documentation. In the meanwhile, if you're trying to use EasyPZ and have questions, do not hesitate to <a href="mailto:easypzjs@gmail.com">let us know</a>!</p>
+
+            <p>Also, you can try our work in progress browser bookmark, which lets you pan and zoom in on SVG based visualizations on any website! Here it is: <a href='javascript:(function(){var transformSvgs=function(doc){var svgs=doc.getElementsByTagName("svg"); for(var i=0;i<svgs.length;i++){ svgs[i].setAttribute("easypz", "{\"applyTransformTo\": \"svg > *\"}"); } doc.body.appendChild(document.createElement("script")).src="https://code.easypz.io/easypz.latest.js";};transformSvgs(document);var frames=document.getElementsByTagName("iframe");for(var i=0;i<frames.length;i++){transformSvgs(frames[i].contentDocument);}})();'>EasyPZ</a></p>
         </article>
     </div>
 

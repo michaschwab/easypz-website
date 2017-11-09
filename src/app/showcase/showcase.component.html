@@ -1,0 +1,85 @@
+<div class="showcase" #showcaseContainer>
+
+
+    <a name="showcase" id="showcase"></a>
+    <header class="website-section-header">
+        <h2><i class="fa fa-picture-o" aria-hidden="true"></i> Show Cases</h2>
+    </header>
+
+    <!--<div class="content">
+        <h1>Pan & Zoom How You Want - Try it!</h1>
+    </div>
+-->
+    <div class="content">
+        <h1>Automatic SVG Transformation</h1>
+        <!--<p>We are working on releasing all of our code in an organized and clean way. If you're interested in using it, <a href="mailto:easypzjs@gmail.com">let us know</a>! It motivates us and if needed, we might be able to give you a preliminary version of the library.</p>-->
+        <article class="markdown-body entry-content" itemprop="text">
+
+            <p>To make any visualization zoomable on mobile and desktop using EasyPZ, simply include:</p>
+            <pre><code>&lt;script src="https://code.easypz.io/easypz.latest.min.js"&gt;&lt;/script&gt;
+</code></pre>
+            <p>If you're using SVG, you can then assign an <code>easypz</code> attribute to the visualization you want to make zoomable.
+            If you want EasyPZ to simply make all elements of your SVG zoomable, set <code>"applyTransformTo": "svg > *"</code>, and EasyPZ will take care of the rest:</p>
+
+            <iframe width="650" height="160" src="//jsfiddle.net/michaschwab/6npan023/3/embedded/html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <iframe width="300" height="160" src="//jsfiddle.net/michaschwab/6npan023/3/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+            <p>If you want the transformation to only happen on specific elements, you can change the selector:</p>
+
+            <iframe width="650" height="160" src="//jsfiddle.net/michaschwab/v0xe4d9d/1/embedded/html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <iframe width="300" height="160" src="//jsfiddle.net/michaschwab/v0xe4d9d/1/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+
+            This works remarkably well, even for more advanced visualizations. It works on almost all visualizations in the D3 gallery, see examples below:
+
+            <div class="carousel">
+                <div>Bubble Chart<br><a href="http://easypz.io:3000/4063269"><img width="133" src="https://camo.githubusercontent.com/dbaf877e0e81e571ae42fa1f6e1115bf052f72ca/687474703a2f2f64336a732e6f72672f65782f627562626c652e706e67" data-canonical-src="http://d3js.org/ex/bubble.png"></a></div>
+                <div>Force-Directed Graph<br><a href="http://easypz.io:3000/4062045"><img width="133" src="https://camo.githubusercontent.com/d7b97d7c0873e949f827918763174efcca6c4a5f/687474703a2f2f64336a732e6f72672f65782f666f7263652e706e67" data-canonical-src="http://d3js.org/ex/force.png"></a></div>
+                <div>Streamgraph<br><a href="http://easypz.io:3000/4060954"><img width="133" src="https://camo.githubusercontent.com/3cbc8c7898d1336e83e499cb66274c15e63f65bf/687474703a2f2f64336a732e6f72672f65782f73747265616d2e706e67" data-canonical-src="http://d3js.org/ex/stream.png"></a></div>
+                <div>Treemap<br><a href="http://easypz.io:3000/4063582"><img width="133" src="https://camo.githubusercontent.com/e6612268ca90a8c2f6d1da62f85d7d86616c37de/687474703a2f2f64336a732e6f72672f65782f747265656d61702e706e67" data-canonical-src="http://d3js.org/ex/treemap.png"></a></div>
+                <div>Choropleth<br><a href="http://easypz.io:3000/4060606"><img width="133" src="https://camo.githubusercontent.com/0afefbc191693b8ecaea58cda0b587a908fc0174/687474703a2f2f64336a732e6f72672f65782f63686f726f706c6574682e706e67" data-canonical-src="http://d3js.org/ex/choropleth.png"></a></div>
+            </div>
+
+            <p>Note that all of this is possible without a single line of JavaScript code by the application developer.
+                If you are wondering how your visualizations would work well with the automated pan and zoom provided by
+                EasyPZ, you can simply try it without any changes to your applications.
+            </p>
+
+            <p>With our <b class="highlight">browser bookmark</b>, you can automatically zoom in to any SVG-based visualization you see on the web,
+            simply by clicking the bookmark while on the website. Feel free to drag the following link to your bookmarks to try EasyPZ now:
+                <b class="highlight">
+                <a href='javascript:(function(){var transformSvgs=function(doc){var svgs=doc.getElementsByTagName("svg"); for(var i=0;i<svgs.length;i++){ svgs[i].setAttribute("easypz", "{\"applyTransformTo\": \"svg > *\"}"); } doc.body.appendChild(document.createElement("script")).src="https://code.easypz.io/easypz.latest.js";};transformSvgs(document);var frames=document.getElementsByTagName("iframe");for(var i=0;i<frames.length;i++){transformSvgs(frames[i].contentDocument);}})();'>EasyPZ</a>
+                </b>
+            </p>
+
+
+            <!--<p>If you want to set specific settings, it can be done the following way:</p>
+            <pre><code>&lt;svg easypz='
+{{ '{' }}
+   "onPanned": "onPanned",
+   "onZoomed": "onZoomed",
+   "onResetAbsoluteScale": "onResetAbsoluteScale",
+   "modes": ["SIMPLE_PAN", "HOLD_ZOOM_IN", "CLICK_HOLD_ZOOM_OUT", "WHEEL_ZOOM", "PINCH_ZOOM", "DBLCLICK_ZOOM_IN", "DBLRIGHTCLICK_ZOOM_OUT"]
+{{ '}' }}' width="960" height="600"&gt;
+
+&lt;/svg&gt;
+</code></pre>
+            <p>Then, as minimum, implement the global scope functions <code>onZoomed()</code> and <code>onPanned()</code>.
+                EasyPZ will call them whenever it detects zoom and pan interactions, and will let you know how much the user wants to translate or scale the content.</p>
+
+            <p>We are working on creating a demo page with lots of zoomable visualizations, and a documentation. In the meanwhile, if you're trying to use EasyPZ and have questions, do not hesitate to <a href="mailto:easypzjs@gmail.com">let us know</a>!</p>
+-->
+            <!--<p>Also, you can try our work in progress browser bookmark, which lets you pan and zoom in on SVG based visualizations on any website! Here it is: </p>-->
+        </article>
+    </div>
+<!--
+    <section class="content">
+
+        <header>
+            <h3>Important headline</h3>
+        </header>
+
+    </section>-->
+
+
+</div>

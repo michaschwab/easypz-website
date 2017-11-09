@@ -16,7 +16,7 @@ import {RandomstringService} from 'services/randomstring.service';
 import {ExperimentsettingsService} from '../services/experimentsettings.service';
 import {TruncatePipe} from '../services/truncate.pipe';
 import {BrowserinfoService} from '../services/browserinfo.service';
-import {HomeComponent} from './home/home.component';
+import {LibraryComponent} from './library/library.component';
 import {HttpModule} from '@angular/http';
 import {NumberToArrayPipe} from '../services/numbertoarray.pipe';
 import {MedianPipe} from '../services/median.pipe';
@@ -27,14 +27,15 @@ import {FilteroutextremevaluesPipe} from '../services/filteroutextremevalues.pip
 import {SubtractIndividuallyPipe} from 'services/subtractindividually.pipe';
 import {FilterHighValuesService} from '../services/filterHighValues.service';
 import {ResearchComponent} from "./research/research.component";
-
+import {ShowcaseComponent} from "./showcase/showcase.component";
+/*
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
-    /*{ path: '',
+    /!*{ path: '',
         redirectTo: '/szd',
         pathMatch: 'full'
-    },*/
-];
+    },*!/
+];*/
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ const appRoutes: Routes = [
     NumberVisComponent,
     LoggerComponent,
     ResearchComponent,
-    HomeComponent,
+    ShowcaseComponent,
+    LibraryComponent,
     RoundPipe,
     TruncatePipe,
     NumberToArrayPipe,
@@ -60,7 +62,7 @@ const appRoutes: Routes = [
     BrowserModule,
     FormsModule,
     HttpModule,
-    RouterModule.forRoot(appRoutes)
+    /*RouterModule.forRoot(appRoutes)*/
   ],
   providers: [AnimationService, ComboService, RandomstringService, ExperimentsettingsService, BrowserinfoService],
   bootstrap: [AppComponent]

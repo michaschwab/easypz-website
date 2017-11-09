@@ -1,0 +1,47 @@
+.showcase {
+    padding: 67px 0 40px 0;
+}
+.content {
+    padding: 0 20px;
+}
+
+
+.website-section-header {
+    background: #d70;
+    padding: 0px 20px;
+    position: fixed;
+    width: 1000px;
+    box-sizing: border-box;
+    top: 67px;
+    /*z-index: 200;*/
+}
+
+.website-section-header h2 {
+    margin: 0;
+    font-size: 100%;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    font-weight: normal;
+}
+
+
+
+pre {
+    font-size: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px;
+    background: #111;
+    margin: 15px 0 0;
+}
+
+.carousel div {
+    display: inline-block;
+    padding: 20px;
+}
+
+
+
+.highlight, .highlight a {
+    color: #d70;
+}

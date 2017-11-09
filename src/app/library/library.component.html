@@ -1,13 +1,13 @@
-<div class="home" #homeContainer>
+<div class="home" #libraryContainer>
 
 
     <header class="website-section-header">
-        <h2><i class="fa fa-code" aria-hidden="true"></i> JS Library</h2>
+        <h2><i class="fa fa-code" aria-hidden="true"></i> Library Features</h2>
     </header>
     <a name="library" id="library"></a>
 
     <div class="content">
-        <h1>Pan & Zoom How You Want - Try it!</h1>
+        <h1>Dozens of ways of zooming and panning!</h1>
     </div>
 
     <section class="content">
@@ -69,39 +69,6 @@
     </section>
 
 
-    <div class="content">
-        <h1>The Library</h1>
-        <!--<p>We are working on releasing all of our code in an organized and clean way. If you're interested in using it, <a href="mailto:easypzjs@gmail.com">let us know</a>! It motivates us and if needed, we might be able to give you a preliminary version of the library.</p>-->
-        <article class="markdown-body entry-content" itemprop="text">
 
-            <p>To use EasyPZ, simply include</p>
-            <pre><code>&lt;script src="https://code.easypz.io/easypz.latest.min.js"&gt;&lt;/script&gt;
-</code></pre>
-            <p>and assign an <code>easypz</code> attribute to the visualization you want to make zoomable, e.g:</p>
-            <pre><code>&lt;svg easypz="true" width="960" height="600"&gt;
-
-&lt;/svg&gt;
-</code></pre>
-            <p>If you want to set specific settings, it can be done the following way:</p>
-            <pre><code>&lt;svg easypz='
-{{ '{' }}
-   "onPanned": "onPanned",
-   "onZoomed": "onZoomed",
-   "onResetAbsoluteScale": "onResetAbsoluteScale",
-   "modes": ["SIMPLE_PAN", "HOLD_ZOOM_IN", "CLICK_HOLD_ZOOM_OUT", "WHEEL_ZOOM", "PINCH_ZOOM", "DBLCLICK_ZOOM_IN", "DBLRIGHTCLICK_ZOOM_OUT"]
-{{ '}' }}' width="960" height="600"&gt;
-
-&lt;/svg&gt;
-</code></pre>
-            <p>Then, as minimum, implement the global scope functions <code>onZoomed()</code> and <code>onPanned()</code>.
-                EasyPZ will call them whenever it detects zoom and pan interactions, and will let you know how much the user wants to translate or scale the content.</p>
-
-            <p>We are working on creating a demo page with lots of zoomable visualizations, and a documentation. In the meanwhile, if you're trying to use EasyPZ and have questions, do not hesitate to <a href="mailto:easypzjs@gmail.com">let us know</a>!</p>
-
-            <p>Also, you can try our work in progress browser bookmark, which lets you pan and zoom in on SVG based visualizations on any website! Here it is: <a href='javascript:(function(){var transformSvgs=function(doc){var svgs=doc.getElementsByTagName("svg"); for(var i=0;i<svgs.length;i++){ svgs[i].setAttribute("easypz", "{\"applyTransformTo\": \"svg > *\"}"); } doc.body.appendChild(document.createElement("script")).src="https://code.easypz.io/easypz.latest.js";};transformSvgs(document);var frames=document.getElementsByTagName("iframe");for(var i=0;i<frames.length;i++){transformSvgs(frames[i].contentDocument);}})();'>EasyPZ</a></p>
-        </article>
-    </div>
-
-    <research></research>
 
 </div>

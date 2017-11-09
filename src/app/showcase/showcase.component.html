@@ -11,7 +11,7 @@
     </div>
 -->
     <div class="content">
-        <h1>Automatic SVG Transformation</h1>
+        <h1>Standard: Automatic SVG Transformation</h1>
         <!--<p>We are working on releasing all of our code in an organized and clean way. If you're interested in using it, <a href="mailto:easypzjs@gmail.com">let us know</a>! It motivates us and if needed, we might be able to give you a preliminary version of the library.</p>-->
         <article class="markdown-body entry-content" itemprop="text">
 
@@ -30,7 +30,7 @@
             <iframe width="300" height="160" src="//jsfiddle.net/michaschwab/v0xe4d9d/1/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
-            This works remarkably well, even for more advanced visualizations. It works on almost all visualizations in the D3 gallery, see examples below:
+            This works remarkably well, even for more advanced visualizations, including animations. It works on almost all visualizations in the D3 gallery, see examples below:
 
             <div class="carousel">
                 <div>Bubble Chart<br><a href="http://easypz.io:3000/4063269"><img width="133" src="https://camo.githubusercontent.com/dbaf877e0e81e571ae42fa1f6e1115bf052f72ca/687474703a2f2f64336a732e6f72672f65782f627562626c652e706e67" data-canonical-src="http://d3js.org/ex/bubble.png"></a></div>
@@ -41,7 +41,7 @@
             </div>
 
             <p>Note that all of this is possible without a single line of JavaScript code by the application developer.
-                If you are wondering how your visualizations would work well with the automated pan and zoom provided by
+                If you are wondering whether your visualizations would work well with the automated pan and zoom provided by
                 EasyPZ, you can simply try it without any changes to your applications.
             </p>
 
@@ -72,6 +72,31 @@
             <!--<p>Also, you can try our work in progress browser bookmark, which lets you pan and zoom in on SVG based visualizations on any website! Here it is: </p>-->
         </article>
     </div>
+
+
+    <div class="content">
+        <h1>Advanced: Manual Implementation</h1>
+        <!--<p>We are working on releasing all of our code in an organized and clean way. If you're interested in using it, <a href="mailto:easypzjs@gmail.com">let us know</a>! It motivates us and if needed, we might be able to give you a preliminary version of the library.</p>-->
+        <article class="markdown-body entry-content" itemprop="text">
+            <p>If you're not using SVG (e.g. canvas or webGL), or if you want more fine control over what happens when the user pans and zooms,
+                you should consider a manual implementation of pan and zoom using EasyPZ.</p>
+
+            <p>Below, there is an example of using EasyPZ in a d3-based force-directed layout, using <b>d3 scales</b> to rescale the axis to pan and zoom.
+                The code can be found on its <a href="https://bl.ocks.org/michaschwab/d1f00f040ba726785b03ac9477b4711f" target="_blank">block</a>.</p>
+
+            <iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="http://easypz.io:3000/d1f00f040ba726785b03ac9477b4711f/raw/index.html" marginwidth="0" marginheight="0" style="height:400px;width:100%" scrolling="no"></iframe>
+
+            <p>Below, there is an example of using EasyPZ in a d3-based geo-spatial map, using a <b>d3 projection</b> to rescale the axis to pan and zoom.
+                The code can be found on its <a href="https://bl.ocks.org/michaschwab/d43ea0481a0f7940d459520726a18b25" target="_blank">block</a>.</p>
+
+            <iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="http://easypz.io:3000/d43ea0481a0f7940d459520726a18b25/raw/index.html" marginwidth="0" marginheight="0" style="height:400px;width:100%" scrolling="no"></iframe>
+
+            We will add more examples here in the future, particularly for canvas or webGL applications. If you have more questions regarding using EasyPZ, please <a href="mailto:easypzjs@gmail.com">reach out</a>!
+
+        </article>
+    </div>
+
+
 <!--
     <section class="content">
 

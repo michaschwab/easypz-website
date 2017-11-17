@@ -13,7 +13,6 @@ import {RouterModule, Routes} from '@angular/router';
 import {ComboService} from '../services/combo.service';
 import {RoundPipe} from '../services/round.pipe';
 import {RandomstringService} from 'services/randomstring.service';
-import {ExperimentsettingsService} from '../services/experimentsettings.service';
 import {TruncatePipe} from '../services/truncate.pipe';
 import {BrowserinfoService} from '../services/browserinfo.service';
 import {LibraryComponent} from './library/library.component';
@@ -64,7 +63,7 @@ const appRoutes: Routes = [
     HttpModule,
     /*RouterModule.forRoot(appRoutes)*/
   ],
-  providers: [AnimationService, ComboService, RandomstringService, ExperimentsettingsService, BrowserinfoService],
+  providers: [AnimationService, ComboService, RandomstringService, BrowserinfoService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -16,18 +16,22 @@
         <article class="markdown-body entry-content" itemprop="text">
 
             <p>To make any visualization zoomable on mobile and desktop using EasyPZ, simply include:</p>
-            <pre><code>&lt;script src="https://code.easypz.io/easypz.latest.min.js"&gt;&lt;/script&gt;
+            <pre *ngIf="width>=1000"><code>&lt;script src="https://code.easypz.io/easypz.latest.min.js"&gt;&lt;/script&gt;
+</code></pre>
+            <pre *ngIf="width<1000"><code>&lt;script
+    src="https://code.easypz.io/easypz.latest.min.js"&gt;
+&lt;/script&gt;
 </code></pre>
             <p>If you're using SVG, you can then assign an <code>easypz</code> attribute to the visualization you want to make zoomable.
             If you want EasyPZ to simply make all elements of your SVG zoomable, set <code>"applyTransformTo": "svg > *"</code>, and EasyPZ will take care of the rest:</p>
 
-            <iframe width="650" height="160" src="//jsfiddle.net/michaschwab/6npan023/3/embedded/html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-            <iframe width="300" height="160" src="//jsfiddle.net/michaschwab/6npan023/3/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <iframe [attr.width]="codeWidth" height="160" src="//jsfiddle.net/michaschwab/6npan023/3/embedded/html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <iframe [attr.width]="visualWidth" height="160" src="//jsfiddle.net/michaschwab/6npan023/3/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
             <p>If you want the transformation to only happen on specific elements, you can change the selector:</p>
 
-            <iframe width="650" height="160" src="//jsfiddle.net/michaschwab/v0xe4d9d/1/embedded/html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-            <iframe width="300" height="160" src="//jsfiddle.net/michaschwab/v0xe4d9d/1/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <iframe [attr.width]="codeWidth" height="160" src="//jsfiddle.net/michaschwab/v0xe4d9d/1/embedded/html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <iframe [attr.width]="visualWidth" height="160" src="//jsfiddle.net/michaschwab/v0xe4d9d/1/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
             This works remarkably well, even for more advanced visualizations, including animations. It works on almost all visualizations in the D3 gallery, see examples below:
@@ -84,7 +88,11 @@
             <p>Below, there is an example of using EasyPZ in a d3-based force-directed layout, using <b>d3 scales</b> to rescale the axis to pan and zoom.
                 The code can be found on its <a href="https://bl.ocks.org/michaschwab/d1f00f040ba726785b03ac9477b4711f" target="_blank">block</a>.</p>
 
-            <iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="https://demos.easypz.io/d1f00f040ba726785b03ac9477b4711f/raw/index.html" marginwidth="0" marginheight="0" style="height:400px;width:100%" scrolling="no"></iframe>
+            <div class="forcelayout-wrap-outer">
+                <div class="forcelayout-wrap-inner">
+                    <iframe sandbox="allow-popups allow-scripts allow-forms allow-same-origin" src="https://demos.easypz.io/d1f00f040ba726785b03ac9477b4711f/raw/index.html" marginwidth="0" marginheight="0" style="height:400px;width:100%" scrolling="no"></iframe>
+                </div>
+            </div>
 
             <p>Below, there is an example of using EasyPZ in a d3-based geo-spatial map, using a <b>d3 projection</b> to rescale the axis to pan and zoom.
                 The code can be found on its <a href="https://bl.ocks.org/michaschwab/d43ea0481a0f7940d459520726a18b25" target="_blank">block</a>.</p>
@@ -94,8 +102,8 @@
             <p>Below, there is an example of using EasyPZ in a <b>canvas</b> environment.</p>
 
 
-            <iframe width="650" height="425" src="//jsfiddle.net/michaschwab/wpkLjrfh/4/embedded/js,html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-            <iframe width="300" height="425" src="//jsfiddle.net/michaschwab/wpkLjrfh/4/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <iframe [attr.width]="codeWidth" height="425" src="//jsfiddle.net/michaschwab/wpkLjrfh/4/embedded/js,html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <iframe [attr.width]="visualWidth" height="425" src="//jsfiddle.net/michaschwab/wpkLjrfh/4/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
             We will add more examples and code explanations here in the future. If you have more questions regarding using EasyPZ, please <a href="mailto:easypzjs@gmail.com"><b>reach out</b></a>!
 

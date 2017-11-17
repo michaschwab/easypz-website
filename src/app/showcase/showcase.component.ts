@@ -10,12 +10,13 @@ export class ShowcaseComponent implements AfterViewChecked
     @ViewChild("showcaseContainer") showcaseContainer : ElementRef;
     
     width: number;
-    timelineWidth = 400;
-    
+    codeWidth: number;
+    visualWidth: number;
     
     ngAfterViewChecked(): void
     {
         this.width = this.showcaseContainer.nativeElement.offsetWidth;
-        this.timelineWidth = this.width < 1000 ? this.width - 30 : 420;
+        this.codeWidth      = this.width < 1000 ? this.width - 30 : 650;
+        this.visualWidth    = this.width < 1000 ? this.width - 30 : 300;
     }
 }

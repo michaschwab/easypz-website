@@ -37,7 +37,28 @@ pre {
 
 .carousel div {
     display: inline-block;
-    padding: 20px;
+    padding: 5px;
+}
+
+@media(min-width: 1000px) {
+    .carousel div {
+        padding: 20px;
+    }
+
+}
+
+@media(max-width: 999px) {
+    .forcelayout-wrap-outer {
+        border: 2px inset rgb(238, 238, 238);
+        overflow: hidden;
+    }
+    .forcelayout-wrap-inner {
+        margin-left: -300px;
+
+    }
+    .forcelayout-wrap-inner iframe {
+        border: 0;
+    }
 }
 
 

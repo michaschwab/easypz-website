@@ -81,7 +81,7 @@ h3:before {
     }
 }
 
-@media(max-width:400px) {
+@media(max-width:450px) {
     .hide-on-tiny {
         display: none;
     }

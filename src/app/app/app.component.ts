@@ -34,6 +34,9 @@ export class AppComponent implements AfterViewInit
     
     scrollTo(anchorName: string)
     {
+        //let anchor = document.getElementsByName(anchorName)[0];
+        //console.log(anchor, anchor.getBoundingClientRect());
+        // For some reason scrollIntoView does not work for the first link.
         document.getElementsByName(anchorName)[0].scrollIntoView({block: 'start', behavior: 'smooth'});
     }
 }

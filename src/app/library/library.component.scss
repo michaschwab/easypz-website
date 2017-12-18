@@ -7,6 +7,7 @@
 
 numbervis {
     background: #fff;
+    filter: invert(85%);
 }
 
 @media(min-width:1000px)
@@ -55,6 +56,7 @@ h4 {
     padding: 0px 20px;
     position: sticky;
     /*z-index: 300;*/
+    z-index: 5;
     width: 100%;
     box-sizing: border-box;
     top: 67px;

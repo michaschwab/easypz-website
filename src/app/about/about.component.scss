@@ -74,7 +74,7 @@ h4 {
     display: inline-block;
     width: 190px;
     margin-right: 46px;
-
+    text-align: center;
 }
 .people li a {
     width: 100%;
@@ -87,4 +87,22 @@ h4 {
 .people li a:hover {
     text-decoration: none;
     background: rgba(255,255,255,0.4);
+}
+.profile-icon-wrap {
+    height:190px;
+    width: 190px;
+    overflow:hidden;
+    margin-bottom: 10px;
+    background: #ccc;
+}
+
+.contact-button {
+    background: #d70;
+    border-radius: 0;
+    width: 150px;
+    text-align: center;
+    border-width: 0;
+    display: block;
+    padding: 10px 20px;
+    text-decoration: none;
 }

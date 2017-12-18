@@ -9,26 +9,29 @@ import {ZoomComponent} from '../zoomable/zoomable.component';
 })
 export class AppComponent implements AfterViewInit
 {
-    activeTab = 'showcase';
+    activeTab = '';
     
     ngAfterViewInit(): void
     {
         window.addEventListener('scroll', () =>
         {
+            const sections = ['showcase', 'library', 'about'];
             const scrollPos = window.pageYOffset + 67;
-            const libraryPos = document.getElementById('library').offsetTop;
-            const researchPos = document.getElementById('research').offsetTop;
             
-            this.activeTab = 'showcase';
+            const sectionPositions = sections.map(sectionName =>
+                document.getElementById(sectionName).offsetTop
+            );
+            sectionPositions.push(1000000); // Infinity
+    
+            this.activeTab = '';
             
-            if(scrollPos >= libraryPos && scrollPos < researchPos)
+            sections.forEach((sectionName, index) =>
             {
-                this.activeTab = 'library';
-            }
-            else if(scrollPos >= researchPos)
-            {
-                this.activeTab = 'research';
-            }
+                if(scrollPos >= sectionPositions[index] && scrollPos <= sectionPositions[index + 1])
+                {
+                    this.activeTab = sectionName;
+                }
+            });
         });
     }
     

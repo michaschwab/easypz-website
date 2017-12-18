@@ -1,5 +1,5 @@
 .showcase {
-    padding: 67px 0 40px 0;
+    padding: 0px 0 40px 0;
 }
 .content {
     padding: 0 20px;
@@ -9,8 +9,9 @@
 .website-section-header {
     background: #d70;
     padding: 0px 20px;
-    position: fixed;
-    width: 1000px;
+    /*position: fixed;*/
+    position: sticky;
+    width: 100%;
     box-sizing: border-box;
     top: 67px;
     /*z-index: 200;*/

@@ -27,6 +27,7 @@ import {SubtractIndividuallyPipe} from 'services/subtractindividually.pipe';
 import {FilterHighValuesService} from '../services/filterHighValues.service';
 import {ResearchComponent} from "./research/research.component";
 import {ShowcaseComponent} from "./showcase/showcase.component";
+import {AboutComponent} from "./about/about.component";
 /*
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -41,6 +42,7 @@ const appRoutes: Routes = [
     AppComponent,
     CodableTimelineComponent,
     ZoomComponent,
+    AboutComponent,
     NumberVisComponent,
     LoggerComponent,
     ResearchComponent,

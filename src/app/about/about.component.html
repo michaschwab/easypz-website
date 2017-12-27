@@ -17,25 +17,38 @@
         People Involved:
 
         <ul class="people">
-            <li>
-                <a href="http://michailschwab.com">
-                    <div class="profile-icon-wrap"><img width="190" src="https://www.ccis.northeastern.edu/wp-content/uploads/2017/05/linderpix-NEU-53626-crop.jpg" /></div>
+            <li [style.width]="headshotWidth + 'px'">
+                <a href="http://michailschwab.com" [style.width]="headshotWidth + 'px'">
+                    <div class="profile-icon-wrap" [style.width]="headshotWidth + 'px'" [style.height]="headshotWidth + 'px'">
+                        <img [width]="headshotWidth" src="https://www.ccis.northeastern.edu/wp-content/uploads/2017/05/linderpix-NEU-53626-crop.jpg" />
+                    </div>
                     Michail Schwab
                 </a>
             </li>
-            <li>
-                <a href="http://jamestompkin.com">
-                    <div class="profile-icon-wrap"><img width="190" src="http://jamestompkin.com/img/20140418_james_tompkin_185px.png"/></div>
-                    James Tompkin</a>
+            <li [style.width]="headshotWidth + 'px'">
+                <a href="http://jamestompkin.com" [style.width]="headshotWidth + 'px'">
+                    <div class="profile-icon-wrap" [style.width]="headshotWidth + 'px'" [style.height]="headshotWidth + 'px'">
+                        <img [width]="headshotWidth" src="http://jamestompkin.com/img/20140418_james_tompkin_185px.png"/>
+                    </div>
+                    James Tompkin
+                </a>
             </li>
-            <li><a href="http://jeffhuang.com">
-                <div class="profile-icon-wrap"><img width="190" src="http://jeffhuang.com/headshot.jpg"/></div>
-                Jeff Huang
-            </a></li>
-            <li><a href="https://www.ccis.northeastern.edu/people/michelle-borkin/">
-                <div class="profile-icon-wrap"><img width="190" src="https://www.ccis.northeastern.edu/wp-content/uploads/2016/02/Michelle-Borkin-index-image.jpg" /></div>
-                Michelle Borkin
-            </a></li>
+            <li [style.width]="headshotWidth + 'px'">
+                <a href="http://jeffhuang.com" [style.width]="headshotWidth + 'px'">
+                    <div class="profile-icon-wrap" [style.width]="headshotWidth + 'px'" [style.height]="headshotWidth + 'px'">
+                        <img [width]="headshotWidth" src="http://jeffhuang.com/headshot.jpg"/>
+                    </div>
+                    Jeff Huang
+                </a>
+            </li>
+            <li [style.width]="headshotWidth + 'px'">
+                <a href="https://www.ccis.northeastern.edu/people/michelle-borkin/" [style.width]="headshotWidth + 'px'">
+                    <div class="profile-icon-wrap" [style.width]="headshotWidth + 'px'" [style.height]="headshotWidth + 'px'">
+                        <img [width]="headshotWidth" src="https://www.ccis.northeastern.edu/wp-content/uploads/2016/02/Michelle-Borkin-index-image.jpg" />
+                    </div>
+                    Michelle Borkin
+                </a>
+            </li>
         </ul>
 
         <p>Please feel free to reach out! We're excited to get people to use EasyPZ in their interactive visualizations, for their research, and more!</p>

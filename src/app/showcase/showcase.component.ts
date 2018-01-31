@@ -15,10 +15,10 @@ export class ShowcaseComponent implements AfterViewChecked
     visualWidth: number;
 
     public demos = [
-        { name: 'Streamgraph', blockid: '4060954', imgUrl: 'http://d3js.org/ex/stream.png'},
-        { name: 'Choropleth', blockid: '4060606', imgUrl: 'http://d3js.org/ex/choropleth.png'},
-        { name: 'Chord Diagram', blockid: '4062006', imgUrl: 'http://d3js.org/ex/chord.png'},
-        { name: 'Force Graph', blockid: '4062045', imgUrl: 'http://d3js.org/ex/force.png'}/*,
+        { name: 'Streamgraph', blockid: '4060954', imgUrl: 'https://d3js.org/ex/stream.png'},
+        { name: 'Choropleth', blockid: '4060606', imgUrl: 'https://d3js.org/ex/choropleth.png'},
+        { name: 'Chord Diagram', blockid: '4062006', imgUrl: 'https://d3js.org/ex/chord.png'},
+        { name: 'Force Graph', blockid: '4062045', imgUrl: 'https://d3js.org/ex/force.png'}/*,
         { name: 'Sunburst', blockid: '4063423', imgUrl: 'http://d3js.org/ex/sunburst.png'},
         { name: 'Circle Packing', blockid: '4063530', imgUrl: 'http://d3js.org/ex/pack.png'},
         { name: 'Population Pyramid', blockid: '4062085', imgUrl: 'http://d3js.org/ex/population.png'},

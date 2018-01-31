@@ -34,7 +34,7 @@
             <iframe [attr.width]="visualWidth" height="170" src="//jsfiddle.net/michaschwab/v0xe4d9d/4/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 
-            <p>This works remarkably well, even for more advanced visualizations, including animations.
+            <p style="margin-top: 50px;">This works remarkably well, even for more advanced visualizations, including animations.
                 It works on almost all visualizations in the D3 gallery, see examples below:</p>
 
             <div class="carousel">
@@ -54,15 +54,17 @@
                 </iframe>
             </div>
 
-            <p>Note that all of this is possible without a single line of JavaScript code by the application developer.
-                If you are wondering whether your visualizations would work well with the automated pan and zoom provided by
-                EasyPZ, you can simply try it without any changes to your applications.
-            </p>
+            <p>Note that all of this is possible without a single line of JavaScript code by the application developer.</p>
 
-            <p>With our <b class="highlight">browser bookmark</b>, you can automatically zoom in to any SVG-based visualization you see on the web,
-            simply by clicking the bookmark while on the website. Feel free to drag the following link to your bookmarks to try EasyPZ now:
-                <b class="highlight">
+
+            <h3>Bookmark</h3>
+            <p>If you are wondering whether your visualizations would work well with the automated pan and zoom provided by
+                EasyPZ, you can simply try it without any changes to your applications. With our
+                <b class="highlight">browser bookmark</b>, you can automatically zoom in to any SVG-based visualization you see on the web,
+            simply by clicking the bookmark while on the website. Drag the following link to your bookmarks to try EasyPZ now:
+                <b class="highlight">»
                 <a href='javascript:(function(){var fadeback=function(el){setTimeout(function(){el.style.transition="background ease-in-out 200ms"; el.style.background="";})}; var transformSvgs=function(doc){var svgs=doc.getElementsByTagName("svg"); for(var i=0;i<svgs.length;i++){ svgs[i].style.background="#d70"; fadeback(svgs[i]);svgs[i].setAttribute("easypz", "{\"applyTransformTo\": \"svg > *\"}"); } doc.body.appendChild(document.createElement("script")).src="https://code.easypz.io/easypz.latest.js";};transformSvgs(document);var frames=document.getElementsByTagName("iframe");for(var i=0;i<frames.length;i++){transformSvgs(frames[i].contentDocument);}})();'>EasyPZ</a>
+                    «
                 </b>
             </p>
 
@@ -112,12 +114,12 @@
             <p>Below, there is an example of using EasyPZ in a <b>canvas</b> environment.</p>
 
 
-            <iframe [attr.width]="codeWidth" height="425" src="//jsfiddle.net/michaschwab/wpkLjrfh/4/embedded/js,html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-            <iframe [attr.width]="visualWidth" height="425" src="//jsfiddle.net/michaschwab/wpkLjrfh/4/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <iframe [attr.width]="codeWidth" height="390" src="//jsfiddle.net/michaschwab/wpkLjrfh/5/embedded/js,html/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+            <iframe [attr.width]="visualWidth" height="390" src="//jsfiddle.net/michaschwab/wpkLjrfh/5/embedded/result/dark/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
             <!--We will add more examples and code explanations here in the future. If you have more questions regarding using EasyPZ, please <a href="mailto:easypzjs@gmail.com"><b>reach out</b></a>!-->
 
-            More explanation and examples can be found in the <a href="https://github.com/michaschwab/easypz/wiki" target="_blank">wiki</a>.
+            <p>More explanation and examples can be found in our <a href="https://github.com/michaschwab/easypz/wiki" target="_blank">wiki</a>.</p>
 
         </article>
     </div>

@@ -51,7 +51,7 @@
         <svg:g class="visibledates">
             <svg:g class="rects">
                 <svg:g *ngFor="let dateObj of visibleDateIndicatorObjects; trackBy: dateTrack" class="date" [class.deleted]="dateObj.deleted" [class.minute]="dateObj.type=='minute'" [class.selected]="dateObj.number==taskSelection" [class.correctlySelected]="dateObj.number==taskSelection&&target===taskSelection" [attr.transform]="vertical?'translate('+(timeline.x(dateObj.roundedStart)+60)+','+timeline.y(dateObj.roundedStart)+')' : 'translate('+(timeline.x(dateObj.roundedStart))+','+(timeline.y(dateObj.roundedStart)+35)+')'">
-                    <svg:rect *ngIf="timeline.primaryAxis(dateObj.roundedEnd)-timeline.primaryAxis(dateObj.roundedStart)>0" (click)="onTargetClicked(dateObj.number, $event, dateObj)" [attr.width]="timeline.x(dateObj.roundedEnd)-timeline.x(dateObj.roundedStart)" [attr.height]="timeline.y(dateObj.roundedEnd)-timeline.y(dateObj.roundedStart)"></svg:rect>
+                    <svg:rect *ngIf="timeline.primaryAxis(dateObj.roundedEnd)-timeline.primaryAxis(dateObj.roundedStart)>0" (click)="onTargetClicked(dateObj.number, $event, dateObj)" [attr.width]="vertical ? 70 : timeline.x(dateObj.roundedEnd)-timeline.x(dateObj.roundedStart)" [attr.height]="!vertical ? 40 : timeline.y(dateObj.roundedEnd)-timeline.y(dateObj.roundedStart)" [attr.y]="!vertical ? -50 : 0" [attr.x]="vertical ? -50 : 0"></svg:rect>
                     <!--<svg:text>{{dateObj.number}}</svg:text>-->
                 </svg:g>
             </svg:g>
@@ -66,7 +66,7 @@
         <svg:g class="visibleparentdates">
             <svg:g *ngFor="let dateObj of visibleParentDateObjects" class="circle-numbers" [class.deleted]="dateObj.deleted" [attr.transform]="vertical?'translate('+(timeline.x(cappedNumber(dateObj.start))-30)+','+timeline.y(cappedNumber(dateObj.start))+')' : 'translate('+(timeline.x(cappedNumber(dateObj.start)))+','+timeline.y(cappedNumber(dateObj.start))+')'">
                 <svg:g *ngIf="timeline.primaryAxis(cappedNumber(dateObj.end))-timeline.primaryAxis(cappedNumber(dateObj.start))>0&&dateObj.end>start&&dateObj.start<end">
-                    <svg:rect [attr.width]="timeline.x(cappedNumber(dateObj.end))-timeline.x(cappedNumber(dateObj.start))" [attr.height]="timeline.y(cappedNumber(dateObj.end))-timeline.y(cappedNumber(dateObj.start))"></svg:rect>
+                    <svg:rect [attr.width]="timeline.x(cappedNumber(dateObj.end))-timeline.x(cappedNumber(dateObj.start))" [attr.height]="!vertical ? 30 : timeline.y(cappedNumber(dateObj.end))-timeline.y(cappedNumber(dateObj.start))" [attr.y]="!vertical ? -50 : 0" [attr.x]="vertical ? -50 : 0"></svg:rect>
                     <svg:g [attr.transform]="'translate('+(timeline.x(cappedNumber(dateObj.end))-timeline.x(cappedNumber(dateObj.start)))/2 + ', ' + (timeline.y(cappedNumber(dateObj.end))-timeline.y(cappedNumber(dateObj.start)))/2 + ')'">
                         <svg:text *ngIf="vertical" [attr.dy]="vertical?5:0" [attr.y]="vertical?dateObj.titles.length*-10:-30">
                             <svg:tspan *ngFor="let title of dateObj.titles" [attr.dy]="vertical?20:0" x="-20">

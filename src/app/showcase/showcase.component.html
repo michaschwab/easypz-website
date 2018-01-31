@@ -37,11 +37,20 @@
             This works remarkably well, even for more advanced visualizations, including animations. It works on almost all visualizations in the D3 gallery, see examples below:
 
             <div class="carousel">
-                <div>Bubble Chart<br><a href="https://demos.easypz.io/4063269"><img width="133" src="https://camo.githubusercontent.com/dbaf877e0e81e571ae42fa1f6e1115bf052f72ca/687474703a2f2f64336a732e6f72672f65782f627562626c652e706e67" data-canonical-src="http://d3js.org/ex/bubble.png"></a></div>
-                <div>Force-Directed Graph<br><a href="https://demos.easypz.io/4062045"><img width="133" src="https://camo.githubusercontent.com/d7b97d7c0873e949f827918763174efcca6c4a5f/687474703a2f2f64336a732e6f72672f65782f666f7263652e706e67" data-canonical-src="http://d3js.org/ex/force.png"></a></div>
-                <div>Streamgraph<br><a href="https://demos.easypz.io/4060954"><img width="133" src="https://camo.githubusercontent.com/3cbc8c7898d1336e83e499cb66274c15e63f65bf/687474703a2f2f64336a732e6f72672f65782f73747265616d2e706e67" data-canonical-src="http://d3js.org/ex/stream.png"></a></div>
-                <div>Treemap<br><a href="https://demos.easypz.io/4063582"><img width="133" src="https://camo.githubusercontent.com/e6612268ca90a8c2f6d1da62f85d7d86616c37de/687474703a2f2f64336a732e6f72672f65782f747265656d61702e706e67" data-canonical-src="http://d3js.org/ex/treemap.png"></a></div>
-                <div>Choropleth<br><a href="https://demos.easypz.io/4060606"><img width="133" src="https://camo.githubusercontent.com/0afefbc191693b8ecaea58cda0b587a908fc0174/687474703a2f2f64336a732e6f72672f65782f63686f726f706c6574682e706e67" data-canonical-src="http://d3js.org/ex/choropleth.png"></a></div>
+                <a *ngFor="let demo of demos" (click)="chooseDemo(demo)" [class.active]="activeDemo==demo">
+                    {{demo.name}}<br />
+                    <img width="133" [src]="demo.imgUrl">
+                </a>
+                <a href="https://demos.easypz.io/" target="_blank" class="more-demos">
+                    More demos at demos.easypz.io!
+                    <br />
+                    <i class="fa fa-plus"></i>
+                </a>
+            </div>
+            <div class="demo-wrapper">
+                <iframe *ngIf="activeDemoUrl" [src]="activeDemoUrl" width="100%" height="400">
+
+                </iframe>
             </div>
 
             <p>Note that all of this is possible without a single line of JavaScript code by the application developer.

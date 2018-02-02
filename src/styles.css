@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "DejaVu Serif";
 }
 html, body, app-root, manual-app {
   height: 100%;
@@ -139,4 +140,3 @@ button.disabled {
 a {
     color: #fff;
 }
-

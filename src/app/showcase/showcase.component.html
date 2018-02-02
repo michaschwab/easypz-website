@@ -59,8 +59,8 @@
 
             <h3>Bookmark</h3>
             <p>If you are wondering whether your visualizations would work well with the automated pan and zoom provided by
-                EasyPZ, you can simply try it without any changes to your applications. With our
-                <b class="highlight">browser bookmark</b>, you can automatically zoom in to any SVG-based visualization you see on the web,
+                EasyPZ, you can simply try it without any changes to your applications. Our
+                <b class="highlight">browser bookmark</b> injects pan and zoom into existing static visualizations you see on the web,
             simply by clicking the bookmark while on the website. Drag the following link to your bookmarks to try EasyPZ now:
                 <b class="highlight">»
                 <a href='javascript:(function(){var fadeback=function(el){setTimeout(function(){el.style.transition="background ease-in-out 200ms"; el.style.background="";})}; var transformSvgs=function(doc){var svgs=doc.getElementsByTagName("svg"); for(var i=0;i<svgs.length;i++){ svgs[i].style.background="#d70"; fadeback(svgs[i]);svgs[i].setAttribute("easypz", "{\"applyTransformTo\": \"svg > *\"}"); } doc.body.appendChild(document.createElement("script")).src="https://code.easypz.io/easypz.latest.js";};transformSvgs(document);var frames=document.getElementsByTagName("iframe");for(var i=0;i<frames.length;i++){transformSvgs(frames[i].contentDocument);}})();'>EasyPZ</a>

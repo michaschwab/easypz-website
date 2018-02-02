@@ -52,6 +52,12 @@ pre {
     padding-top: 10px;
     cursor: pointer;
 }
+@media(max-width: 999px) {
+    .carousel a {
+        width: 165px;
+        height: 155px;
+    }
+}
 .carousel a.active {
     background: #fff;
     pointer-events: none;

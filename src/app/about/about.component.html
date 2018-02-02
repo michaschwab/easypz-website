@@ -22,7 +22,7 @@
                     <div class="profile-icon-wrap" [style.width]="headshotWidth + 'px'" [style.height]="headshotWidth + 'px'">
                         <img [width]="headshotWidth" src="https://www.ccis.northeastern.edu/wp-content/uploads/2017/05/linderpix-NEU-53626-crop.jpg" />
                     </div>
-                    Michail Schwab
+                    Michail<br *ngIf="width<1000" /> Schwab
                 </a>
             </li>
             <li [style.width]="headshotWidth + 'px'">
@@ -30,7 +30,7 @@
                     <div class="profile-icon-wrap" [style.width]="headshotWidth + 'px'" [style.height]="headshotWidth + 'px'">
                         <img [width]="headshotWidth" src="assets/20140418_james_tompkin_185px.png"/>
                     </div>
-                    James Tompkin
+                    James<br *ngIf="width<1000" /> Tompkin
                 </a>
             </li>
             <li [style.width]="headshotWidth + 'px'">
@@ -38,7 +38,7 @@
                     <div class="profile-icon-wrap" [style.width]="headshotWidth + 'px'" [style.height]="headshotWidth + 'px'">
                         <img [width]="headshotWidth" src="assets/jeff.jpg"/>
                     </div>
-                    Jeff Huang
+                    Jeff<br *ngIf="width<1000" /> Huang
                 </a>
             </li>
             <li [style.width]="headshotWidth + 'px'">
@@ -46,7 +46,7 @@
                     <div class="profile-icon-wrap" [style.width]="headshotWidth + 'px'" [style.height]="headshotWidth + 'px'">
                         <img [width]="headshotWidth" src="https://www.ccis.northeastern.edu/wp-content/uploads/2016/02/Michelle-Borkin-index-image.jpg" />
                     </div>
-                    Michelle Borkin
+                    Michelle<br *ngIf="width<1000" /> Borkin
                 </a>
             </li>
         </ul>
@@ -54,7 +54,11 @@
         <p>Please feel free to reach out! We're excited to get people to use EasyPZ in their interactive visualizations, for their research, and more!</p>
 
         <a href="mailto:easypzjs@gmail.com" class="button contact-button"><i class="fa fa-envelope"></i> E-Mail Us!</a>
-        <a href="https://github.com/michaschwab/easypz/wiki" class="button"><i class="fa fa-info-circle"></i> Documentation</a>
+        <a href="https://github.com/michaschwab/easypz/wiki" class="button">
+            <i class="fa fa-info-circle"></i>
+            <span *ngIf="width<1000">Docs</span>
+            <span *ngIf="width>=1000">Documentation</span>
+        </a>
         <a href="https://github.com/michaschwab/easypz" class="button"><i class="fa fa-github"></i> Github</a>
     </div>
 

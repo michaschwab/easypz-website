@@ -99,3 +99,17 @@ header {
     padding: 10px 20px;
     font-size: 24px;
 }
+
+@media(min-width:1000px)
+{
+    .intro-text {
+        width: 500px;
+        float: left;
+    }
+    .intro img {
+        float: right;
+    }
+    .intro br {
+        clear: both;
+    }
+}

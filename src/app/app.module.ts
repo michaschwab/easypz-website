@@ -8,8 +8,6 @@ import {NumberVisComponent} from './number-vis/number-vis.component';
 import {AnimationService} from '../services/animation.service';
 import {ZoomComponent} from './zoomable/zoomable.component';
 import {LoggerComponent } from './logger/logger.component';
-import {environment} from '../environments/environment';
-import {RouterModule, Routes} from '@angular/router';
 import {ComboService} from '../services/combo.service';
 import {RoundPipe} from '../services/round.pipe';
 import {RandomstringService} from 'services/randomstring.service';
@@ -25,9 +23,10 @@ import {StdeverrorPipe} from '../services/stdeverror.pipe';
 import {FilteroutextremevaluesPipe} from '../services/filteroutextremevalues.pipe';
 import {SubtractIndividuallyPipe} from 'services/subtractindividually.pipe';
 import {FilterHighValuesService} from '../services/filterHighValues.service';
-import {ResearchComponent} from "./research/research.component";
-import {ShowcaseComponent} from "./showcase/showcase.component";
-import {AboutComponent} from "./about/about.component";
+import {ResearchComponent} from './research/research.component';
+import {ShowcaseComponent} from './showcase/showcase.component';
+import {AboutComponent} from './about/about.component';
+import {BookmarkComponent} from './bookmark/bookmark.component';
 /*
 const appRoutes: Routes = [
     { path: '', component: HomeComponent },
@@ -48,6 +47,7 @@ const appRoutes: Routes = [
     ResearchComponent,
     ShowcaseComponent,
     LibraryComponent,
+    BookmarkComponent,
     RoundPipe,
     TruncatePipe,
     NumberToArrayPipe,

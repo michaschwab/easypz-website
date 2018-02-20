@@ -8,16 +8,9 @@ import {AfterViewInit, Component, ElementRef, ViewChild} from '@angular/core';
 export class LibraryComponent implements AfterViewInit
 {
     @ViewChild("libraryContainer") libraryContainer : ElementRef;
-    
+
     width: number;
     timelineWidth = 400;
-    
-    showCode = {
-        0: false,
-        1: false,
-        2: false,
-        3: false,
-    };
 
     ngAfterViewInit(): void
     {

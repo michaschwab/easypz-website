@@ -4,10 +4,11 @@ header {
     background-size: 30px 30px;
     padding-left: 36px;
 }
-h2 {
+h1 {
     /*text-shadow: 2px 1px 1px #000;*/
     margin: 0;
     padding-top: 10px;
+    font-size: 1.5em;
 }
 
 nav {
@@ -92,12 +93,12 @@ header {
 }
 
 .website-content-wrapper {
-    margin-top: 67px;
+    margin-top: 48px;
 }
 
 .intro {
-    padding: 10px 20px;
-    font-size: 24px;
+    padding: 10px 20px 0;
+    font-size: 1.5em;
 }
 
 @media(min-width:1000px)

@@ -3,7 +3,7 @@ body {
 
     overflow-y: auto;
   /*position: fixed;*/
-  font-size: 18px;
+    font-size: 1em;
     background: #111;
     color: #eee;
     margin: 0;
@@ -28,8 +28,9 @@ body {
     box-sizing: border-box;
 }
 
-h1, h3 {
+h3 {
     color: #d70;
+    margin: 0.8rem 0 0.4rem 0;
     /*text-shadow: 1px 1px 2px #666;*/
 }
 
@@ -133,7 +134,7 @@ button.disabled {
     height: 90%;
     overflow-y: auto;
     overflow-x: hidden;
-    padding-right: 10px;
+    padding-right: 0.5rem;
 }
 
 
@@ -144,21 +145,28 @@ a {
 
 .website-section-header {
     background: #d70;
-    padding: 10px 20px;
+    padding: 0.75rem 1.5rem;
     /*position: fixed;*/
     position: sticky;
     width: 100%;
     box-sizing: border-box;
     top: 67px;
-    margin-top: 50px;
+    margin-top: 4rem;
     z-index: 200;
 }
 
 .website-section-header h2 {
     margin: 0;
-    font-size: 100%;
+    font-size: 1.25em;
     /*letter-spacing: 10px;*/
     /*text-transform: uppercase;*/
     font-weight: normal;
 }
 
+section.content {
+    background: #333;
+    /*height: 160px;*/
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 3px 3px #111;
+}

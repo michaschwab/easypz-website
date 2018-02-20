@@ -8,6 +8,7 @@
 numbervis {
     background: #fff;
     filter: invert(85%);
+    margin-top: 10px;
 }
 
 @media(min-width:1000px)
@@ -19,36 +20,6 @@ numbervis {
     section numbervis {
         float: right;
     }
-}
-
-section.content {
-    background: #333;
-    /*height: 160px;*/
-    padding: 20px;
-    margin-bottom: 20px;
-    box-shadow: 0 3px 3px #111;
-}
-
-h3, h4 {
-    margin: 0;
-}
-h3 {
-    font-size: 26px;
-}
-h4 {
-    font-weight: normal;
-}
-
-.toggleCode {
-    cursor: pointer;
-    display: inline-block;
-    background: #ddd;
-    color: #000;
-    padding: 5px 12px;
-    border-radius: 5px;
-    box-shadow: 1px 1px 1px #111;
-    width: 120px;
-    text-align: center;
 }
 
 @media(min-width:1000px)
@@ -63,11 +34,15 @@ h4 {
 }
 
 code {
-    font-size: 12px;
+    font-size: 1em;
 
 }
 pre {
     border: 1px dashed #d70;
     padding: 5px;
+    margin: 0;
+}
+
+h4 {
     margin: 0;
 }

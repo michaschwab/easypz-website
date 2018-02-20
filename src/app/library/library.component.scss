@@ -34,13 +34,16 @@ numbervis {
 }
 
 code {
-    font-size: 1em;
+
 
 }
 pre {
     border: 1px dashed #d70;
     padding: 5px;
     margin: 0;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 0.9em;
+    background: rgba(0,0,0,0.2)
 }
 
 h4 {

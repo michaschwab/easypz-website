@@ -45,7 +45,7 @@ nav a {
     display: inline-block;
     background: #d70;
     padding: 10px 0px;
-
+    font-size: 1.1em;
     cursor: pointer;
 
     text-align: center;
@@ -93,12 +93,12 @@ header {
 }
 
 .website-content-wrapper {
-    margin-top: 48px;
+    margin-top: 67px;
 }
 
 .intro {
     padding: 10px 20px 0;
-    font-size: 1.5em;
+    font-size: 1.25em;
 }
 
 @media(min-width:1000px)

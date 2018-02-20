@@ -10,32 +10,10 @@ export class AppComponent implements AfterViewInit
 {
     @ViewChild("appContainer") appContainer: ElementRef;
     width: number;
-    activeTab = '';
 
     ngAfterViewInit(): void
     {
         this.width = this.appContainer.nativeElement.offsetWidth;
-
-        window.addEventListener('scroll', () =>
-        {
-            const sections = ['showcase', 'library', 'about'];
-            const scrollPos = window.pageYOffset + 67;
-
-            const sectionPositions = sections.map(sectionName =>
-                document.getElementById(sectionName).offsetTop
-            );
-            sectionPositions.push(1000000); // Infinity
-
-            this.activeTab = '';
-
-            sections.forEach((sectionName, index) =>
-            {
-                if(scrollPos >= sectionPositions[index] && scrollPos <= sectionPositions[index + 1])
-                {
-                    this.activeTab = sectionName;
-                }
-            });
-        });
     }
 
     scrollTo(anchorName: string)

@@ -140,3 +140,25 @@ button.disabled {
 a {
     color: #fff;
 }
+
+
+.website-section-header {
+    background: #d70;
+    padding: 10px 20px;
+    /*position: fixed;*/
+    position: sticky;
+    width: 100%;
+    box-sizing: border-box;
+    top: 67px;
+    margin-top: 50px;
+    /*z-index: 200;*/
+}
+
+.website-section-header h2 {
+    margin: 0;
+    font-size: 100%;
+    /*letter-spacing: 10px;*/
+    /*text-transform: uppercase;*/
+    font-weight: normal;
+}
+

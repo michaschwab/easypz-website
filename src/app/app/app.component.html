@@ -7,10 +7,16 @@
             <h2>EasyPZ.js <span class="small-on-mobile hide-on-tiny">Pan & Zoom</span></h2>
         </header>
         <ul>
-            <li><a [class.active]="activeTab=='showcase'" (click)="scrollTo('showcase')"><i class="fa fa-picture-o" aria-hidden="true"></i> <span class="pc-only">Show Cases</span></a></li>
+            <li><a href="https://github.com/michaschwab/easypz"><i class="fa fa-github"></i> Github</a></li>
+            <li><a href="https://github.com/michaschwab/easypz/wiki">
+                <i class="fa fa-info-circle"></i>
+                <span *ngIf="width<1000">Docs</span>
+                <span *ngIf="width>=1000">Documentation</span>
+            </a></li>
+            <!--<li><a [class.active]="activeTab=='showcase'" (click)="scrollTo('showcase')"><i class="fa fa-picture-o" aria-hidden="true"></i> <span class="pc-only">Show Cases</span></a></li>
             <li><a [class.active]="activeTab=='library'" (click)="scrollTo('library')"><i class="fa fa-code" aria-hidden="true"></i> <span class="pc-only">Features</span></a></li>
-            <!--<li><a [class.active]="activeTab=='research'" (click)="scrollTo('research')"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> <span class="pc-only">Research</span></a></li>-->
-            <li><a [class.active]="activeTab=='about'" (click)="scrollTo('about')"><i class="fa fa-info-circle" aria-hidden="true"></i> <span class="pc-only">About</span></a></li>
+            &lt;!&ndash;<li><a [class.active]="activeTab=='research'" (click)="scrollTo('research')"><i class="fa fa-lightbulb-o" aria-hidden="true"></i> <span class="pc-only">Research</span></a></li>&ndash;&gt;
+            <li><a [class.active]="activeTab=='about'" (click)="scrollTo('about')"><i class="fa fa-info-circle" aria-hidden="true"></i> <span class="pc-only">About</span></a></li>-->
         </ul>
         <br style="clear: both" />
     </nav>

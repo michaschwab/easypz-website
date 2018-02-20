@@ -151,7 +151,7 @@ a {
     box-sizing: border-box;
     top: 67px;
     margin-top: 50px;
-    /*z-index: 200;*/
+    z-index: 200;
 }
 
 .website-section-header h2 {

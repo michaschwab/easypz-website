@@ -38,7 +38,7 @@ nav {
     /*width: 1000px;*/
     /*width: 100%;*/
     background: #222;
-    z-index: 200;
+    z-index: 300;
 }
 nav a {
     display: inline-block;

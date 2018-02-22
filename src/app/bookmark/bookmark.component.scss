@@ -19,6 +19,21 @@
     .website-section-header {
         width: 1000px;
     }
+
+    .bookmark-text, .bookmark-video {
+        float: left;
+    }
+    .bookmark-text {
+        width: 42%;
+    }
+    .bookmark-video:after {
+        clear: both;
+        content: "."
+    }
+    .bookmark-video {
+        text-align: right;
+        width: 58%;
+    }
 }
 
 .content p, .section-content p {

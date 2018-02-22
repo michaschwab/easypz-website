@@ -11,21 +11,36 @@
     <div class="content">
         <!--<h1>Title</h1>-->
 
-        <p>
-            With the EasyPZ browser bookmark, you can turn any SVG into an interactive visualization with pan and zoom.
-            When browsing the web and seeing a vector graphic you want to zoom in on, simply click the EasyPZ bookmark
-            and explore the visualization in much greater detail!
-        </p>
+        <div class="bookmark-text">
+            <p>
+                With the EasyPZ browser bookmark, you can turn any SVG into an interactive visualization with pan and zoom.
+                When browsing the web and seeing a vector graphic you want to zoom in on, simply click the EasyPZ bookmark
+                and explore the visualization in much greater detail!
+            </p>
 
-        <p>
-            Drag the link into your bookmarks now:
+            <p>
+                Drag the link into your bookmarks now:
 
-            <b class="highlight">»
-                <a href='javascript:(function(){var flash = function(el){var bcr=el.getBoundingClientRect(); var div=document.createElement("div"); div.style.position="absolute"; div.style.pointerEvents="none"; div.style.zIndex=10000; div.style.width=bcr.width+"px"; div.style.height=bcr.height+"px"; div.style.left=bcr.left+"px"; div.style.top=bcr.top+"px"; div.style.background="#d70"; div.style.transition="background ease-in-out 150ms"; el.parentElement.appendChild(div); setTimeout(function(){div.style.background="transparent"}, 15);setTimeout(function(){div.parentElement.removeChild(div)}, 200); }; var transformSvgs=function(doc){var svgs=doc.getElementsByTagName("svg"); for(var i=0;i<svgs.length;i++){ flash(svgs[i]); svgs[i].setAttribute("easypz", "{\"applyTransformTo\": \"svg > *\"}"); } doc.body.appendChild(document.createElement("script")).src="https://code.easypz.io/easypz.latest.min.js";};transformSvgs(document);var frames=document.getElementsByTagName("iframe");for(var i=0;i<frames.length;i++){transformSvgs(frames[i].contentDocument);}})();'>EasyPZ</a>
-                «
-            </b>
+                <b class="highlight">»
+                    <a href='javascript:(function(){var flash = function(el){var bcr=el.getBoundingClientRect(); var div=document.createElement("div"); div.style.position="absolute"; div.style.pointerEvents="none"; div.style.zIndex=10000; div.style.width=bcr.width+"px"; div.style.height=bcr.height+"px"; div.style.left=bcr.left+"px"; div.style.top=bcr.top+"px"; div.style.background="#d70"; div.style.transition="background ease-in-out 150ms"; el.parentElement.appendChild(div); setTimeout(function(){div.style.background="transparent"}, 15);setTimeout(function(){div.parentElement.removeChild(div)}, 200); }; var transformSvgs=function(doc){var svgs=doc.getElementsByTagName("svg"); for(var i=0;i<svgs.length;i++){ flash(svgs[i]); svgs[i].setAttribute("easypz", "{\"applyTransformTo\": \"svg > *\"}"); } doc.body.appendChild(document.createElement("script")).src="https://code.easypz.io/easypz.latest.min.js";};transformSvgs(document);var frames=document.getElementsByTagName("iframe");for(var i=0;i<frames.length;i++){transformSvgs(frames[i].contentDocument);}})();'>EasyPZ</a>
+                    «
+                </b>
+            </p>
 
-        </p>
+            <p>Then try it on any SVG-based visualization, for example by opening the <a target="_blank" href="https://bl.ocks.org/mbostock/1353700">Epicyclic Gearing</a>, activating the EasyPZ bookmark and then zooming in to the visualization.</p>
+        </div>
+        <div class="bookmark-video">
+            <!--<p>See below how it works:</p>-->
+
+            <video width="490" height="340" autoplay loop>
+                <source src="/assets/easypzinjector_1mbit.mp4" type="video/mp4">
+                <!--<source src="movie.ogg" type="video/ogg">-->
+                Your browser does not support the video tag.
+            </video>
+        </div><br style="clear:both" />
+
+
+
 
         <!--<p>If you are wondering whether your visualizations would work well with the automated pan and zoom provided by
             EasyPZ, you can simply try it without any changes to your applications. Our
